@@ -4,7 +4,7 @@ Checks performed on **24–25 September 2026**, on Windows with **Python 3.14.6*
 
 ## Python checks
 
-**47 tests passed.** The suite covers:
+**54 tests passed.** The suite covers:
 
 - Accepted money formats, integer-cent precision and rejected malformed/nonfinite/negative values.
 - Header/encoding failures, future dates, invalid record lengths, row limit.
@@ -18,7 +18,7 @@ Checks performed on **24–25 September 2026**, on Windows with **Python 3.14.6*
 - Filtered CSV/JSON matching the dashboard, stable flags across filters, HTML/formula escaping.
 - Active dataset preservation when more than 20 previews are created.
 - Browser-independent CLI output, invalid input and overwrite refusal.
-- English/Russian language selection, fallback, translated reports and unchanged underlying metrics and record values.
+- English/Russian/German language selection, fallback, translated reports and unchanged underlying metrics and record values. German checks include empty selections, number formatting, catalog coverage and interpolation placeholders.
 
 ## Browser integration
 
@@ -47,6 +47,8 @@ The script writes review screenshots to `work/browser-checks/`. This optional to
 Additional responsive checks passed in all four views at widths **320, 390, 768, 1024 and 1440 pixels** (20 view/width combinations).
 
 The 25 September bilingual update also passed an English → Russian → English browser flow: filters and the active section survived switching, Russian CSV errors and previews rendered, the Russian report opened, and the language preference survived reload. All four Russian views passed horizontal-overflow checks at **320, 390, 768 and 1440 pixels**. The updated English browser smoke test passed again with no browser errors.
+
+The German update passed the same four viewport widths across all four views, CSV validation errors and activation, German report rendering, persistent language selection, explicit URL language changes, and switching DE → RU → EN → DE while preserving the active uploaded dataset. Run `python scripts/language_smoke.py --url http://127.0.0.1:5000` with Chrome and the optional browser dependencies installed to reproduce this check.
 
 ## Accessibility spot check
 

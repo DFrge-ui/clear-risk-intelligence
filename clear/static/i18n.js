@@ -1,6 +1,7 @@
 "use strict";
-const LANG = document.documentElement.lang === "ru" ? "ru" : "en";
-const LOCALE = LANG === "ru" ? "ru-RU" : "en-GB";
+const LANG = ["en", "ru", "de"].includes(document.documentElement.lang)
+  ? document.documentElement.lang : "en";
+const LOCALE = { en: "en-GB", ru: "ru-RU", de: "de-AT" }[LANG];
 const messages = JSON.parse(
   document.getElementById("translations").textContent,
 );
@@ -11,7 +12,7 @@ function t(message, values = {}) {
   return result;
 }
 function translateError(message) {
-  if (LANG !== "ru") return message;
+  if (LANG === "en") return message;
   if (messages[message]) return messages[message];
   const patterns = [
     [/^Exact duplicate of (.+) removed\.$/, "Exact duplicate of {id} removed."],

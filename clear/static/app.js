@@ -88,7 +88,7 @@ function showView(view, updateHash = true) {
 
 function queryString() {
   const params = new URLSearchParams();
-  if (LANG === "ru") params.set("lang", "ru");
+  if (LANG !== "en") params.set("lang", LANG);
   for (const [key, value] of Object.entries(state.filters))
     if (value) params.set(key, value);
   return params.toString() ? `?${params}` : "";
@@ -667,7 +667,8 @@ try {
   /* Storage can be disabled without preventing normal application use. */
 }
 $("language-select").addEventListener("change", (event) => {
-  const lang = event.target.value === "ru" ? "ru" : "en";
+  const lang = ["en", "ru", "de"].includes(event.target.value)
+    ? event.target.value : "en";
   try {
     sessionStorage.setItem(
       "clear_language_switch",
@@ -675,7 +676,13 @@ $("language-select").addEventListener("change", (event) => {
     );
   } catch {}
   document.cookie = `clear_language=${lang}; Path=/; Max-Age=31536000; SameSite=Lax`;
-  location.reload();
+  const url = new URL(location.href);
+  if (url.searchParams.has("lang")) {
+    url.searchParams.set("lang", lang);
+    location.assign(url.href);
+  } else {
+    location.reload();
+  }
 });
 
 showView(location.hash.slice(1) || "overview", false);

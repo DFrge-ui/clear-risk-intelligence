@@ -6,19 +6,33 @@ from pathlib import Path
 from flask import request
 
 
-@lru_cache(maxsize=1)
-def russian_messages():
-    return json.loads((Path(__file__).parent / "locales" / "ru.json").read_text(encoding="utf-8"))
+SUPPORTED_LANGUAGES = ("en", "ru", "de")
+
+
+@lru_cache(maxsize=3)
+def messages_for(lang):
+    if lang not in ("ru", "de"):
+        return {}
+    return json.loads((Path(__file__).parent / "locales" / f"{lang}.json").read_text(encoding="utf-8"))
+
+
+def format_amount(value, lang):
+    formatted = f"{value:,.2f}"
+    if lang == "ru":
+        return formatted.replace(",", " ").replace(".", ",")
+    if lang == "de":
+        return formatted.translate(str.maketrans({",": ".", ".": ","}))
+    return formatted
 
 
 def language():
     value = request.args.get("lang", request.cookies.get("clear_language", "en"))
-    return "ru" if value == "ru" else "en"
+    return value if value in SUPPORTED_LANGUAGES else "en"
 
 
 def translate(message, lang=None, **values):
     lang = lang or language()
-    translated = russian_messages().get(message, message) if lang == "ru" else message
+    translated = messages_for(lang).get(message, message)
     for key, value in values.items():
         translated = translated.replace("{" + key + "}", str(value))
     return translated
@@ -26,7 +40,7 @@ def translate(message, lang=None, **values):
 
 def localize_summary(summary, as_of, lang):
     """Translate prose from already computed facts; do not recalculate any metric."""
-    if lang != "ru":
+    if lang not in ("ru", "de"):
         return summary
     result = summary.copy()
     m = summary["metrics"]
@@ -34,7 +48,30 @@ def localize_summary(summary, as_of, lang):
         result["narrative"] = translate("No incidents match these filters. Broaden the selection to generate a management summary.", lang)
         return result
     top = summary["categories"][0]
-    money = lambda value: f"{value:,.2f}".replace(",", " ").replace(".", ",")
+    money = lambda value: format_amount(value, lang)
+    if lang == "de":
+        result["narrative"] = (
+            f"Zum {as_of} umfasst die Auswahl {m['total']} Vorfälle, davon sind {m['active']} aktiv. "
+            f"Der erfasste Verlust beträgt {money(m['loss'])} EUR. "
+            f"Bei {m['flagged']} Vorfällen wurde mindestens eine Prüfregel ausgelöst; "
+            f"{m['critical']} aktive Fälle sind kritisch. "
+            f"Der höchste erfasste Verlust entfällt auf die Kategorie {translate(top['name'], lang)} "
+            f"({money(top['loss'])} EUR). "
+            f"{m['aging']} aktive Fälle sind älter als 14 Tage; bei {m['unassigned']} fehlt eine Zuständigkeit."
+        )
+        actions = []
+        if m["critical"]:
+            actions.append(f"Prüfen Sie die kritischen aktiven Fälle ({m['critical']}) und legen Sie den nächsten Schritt fest.")
+        if m["unassigned"]:
+            actions.append(f"Weisen Sie den aktiven Fällen ohne Zuständigkeit ({m['unassigned']}) eine verantwortliche Person zu.")
+        if m["aging"]:
+            actions.append(f"Prüfen Sie den Fortschritt der aktiven Fälle, die älter als 14 Tage sind ({m['aging']}).")
+        if m["flagged"] and not actions:
+            actions.append("Gleichen Sie die markierten Verlustbeträge mit den Quelldatensätzen ab.")
+        if not actions:
+            actions.append("Keine Prüfregeln ausgelöst. Setzen Sie die reguläre Kontrolle fort; dies garantiert kein niedriges Risiko.")
+        result["actions"] = actions
+        return result
     result["narrative"] = (
         f"На {as_of} в выборке {m['total']} инцидентов, из них активных — {m['active']}. "
         f"Зафиксированная сумма потерь — {money(m['loss'])} EUR. "
@@ -63,5 +100,5 @@ def init_app(app):
     def localization_context():
         lang = language()
         return {"lang": lang, "tr": lambda text, **values: translate(text, lang, **values),
-                "translations": russian_messages() if lang == "ru" else {},
-                "amount": lambda value: f"{value:,.2f}".replace(",", " ").replace(".", ",") if lang == "ru" else f"{value:,.2f}"}
+                "translations": messages_for(lang),
+                "amount": lambda value: format_amount(value, lang)}

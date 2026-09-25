@@ -19,7 +19,9 @@ The initial dependency installation needs internet. Normal use is local and work
 
 **Русская инструкция:** [README_RU.md](README_RU.md).
 
-Use the **English / Русский** selector in the top bar to change the interface and management report language. Your active dataset, filters and current section are preserved. Company names stay in English. The sample company names are placeholders; the generated incidents do not describe their actual operations.
+Use the **English / Deutsch / Русский** selector in the top bar to change the interface and management report language. Your active dataset, filters and current section are preserved. Company names stay in English. The sample company names are placeholders; the generated incidents do not describe their actual operations.
+
+[German interface preview](docs/overview-de.png) · [Russian interface preview](docs/overview-ru.png)
 
 Manual setup (Windows):
 
@@ -197,4 +199,4 @@ At the project owner's request, the built-in sample uses three real company name
 
 ## Interface language
 
-Use English / Русский in the top bar. A browser preference cookie remembers the language. Changing language preserves the current section, filters and active dataset. CSV columns and stored enum values remain stable; their on-screen labels and printable reports are localized.
+Use English / Deutsch / Русский in the top bar. A browser preference cookie remembers the language. Changing language preserves the current section, filters and active dataset. CSV columns and stored enum values remain stable; their on-screen labels and printable reports are localized.

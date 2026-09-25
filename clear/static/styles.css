@@ -3046,4 +3046,7 @@ html[lang="ru"] .project-hero h2 {
   html[lang="ru"] #metric-loss {
     font-size: clamp(18px, 5vw, 28px);
   }
+  html[lang="de"] #metric-loss {
+    font-size: clamp(18px, 6vw, 28px);
+  }
 }
