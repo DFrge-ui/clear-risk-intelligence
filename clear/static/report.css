@@ -1,0 +1,280 @@
+@font-face {
+  font-family: Manrope;
+  src: url("fonts/manrope-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #eef1e9;
+  color: #283421;
+  font:
+    14px/1.8 Manrope,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+.report-toolbar {
+  max-width: 1000px;
+  margin: 24px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 0 25px;
+}
+.report-toolbar a {
+  color: #567239;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+.report-toolbar button {
+  border: 0;
+  border-radius: 8px;
+  background: #d3f86a;
+  padding: 12px 20px;
+  color: #2d3e1d;
+  font:
+    600 13px Manrope,
+    "Segoe UI",
+    sans-serif;
+  cursor: pointer;
+}
+main {
+  max-width: 950px;
+  margin: 20px auto 50px;
+  background: #fff;
+  padding: 54px 60px;
+  box-shadow: 0 10px 50px #21340b0a;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dce4d1;
+  padding-bottom: 22px;
+  gap: 25px;
+}
+.wordmark {
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1.6px;
+}
+.wordmark > span {
+  color: #8db546;
+}
+.report-type {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #60704f;
+}
+.report-intro {
+  margin-top: 35px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #60704f;
+  font-weight: 600;
+}
+h1 {
+  font-size: 34px;
+  letter-spacing: -1.2px;
+  line-height: 1.25;
+  margin: 12px 0 20px;
+}
+h2 {
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  margin: 30px 0 15px;
+  color: #425930;
+}
+p {
+  margin: 10px 0;
+  color: #657851;
+}
+.disclosure {
+  padding: 15px 18px;
+  background: #f1f6e8;
+  border-left: 3px solid #aec97c;
+  color: #6c8258;
+  font-size: 11px;
+  margin-top: 22px;
+}
+.report-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr 1fr;
+  gap: 18px;
+  background: #f6f9ef;
+  border: 1px solid #e1eace;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.report-metrics strong {
+  font-size: 23px;
+  display: block;
+  letter-spacing: -1px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.report-metrics span {
+  display: block;
+  font-size: 10px;
+  color: #60704f;
+}
+.scope,
+.note {
+  font-size: 11px;
+  color: #60704f;
+  line-height: 1.8;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 11px;
+}
+th {
+  text-align: left;
+  background: #f0f4e8;
+  color: #657c4d;
+  font-size: 10px;
+  font-weight: 600;
+}
+td,
+th {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e4ecd9;
+  vertical-align: top;
+}
+small {
+  display: block;
+  color: #60704f;
+  font-size: 9px;
+}
+ul,
+ol {
+  padding-left: 20px;
+  color: #667f4e;
+  font-size: 12px;
+}
+li {
+  padding: 3px 0;
+}
+footer {
+  margin-top: 40px;
+  border-top: 1px solid #dfe8d2;
+  padding-top: 20px;
+  font-size: 10px;
+  color: #60704f;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #89a858;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  main {
+    margin: 10px 14px;
+    padding: 25px 22px;
+  }
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .report-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .report-metrics strong {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  table {
+    font-size: 10px;
+  }
+  td,
+  th {
+    padding: 8px 5px;
+  }
+}
+@page {
+  size: A4;
+  margin: 17mm;
+}
+@media print {
+  body {
+    background: #fff;
+    font-size: 10pt;
+    line-height: 1.65;
+  }
+  .report-toolbar {
+    display: none;
+  }
+  main {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  header {
+    padding-bottom: 14px;
+  }
+  .report-intro {
+    margin-top: 22px;
+  }
+  h1 {
+    font-size: 27pt;
+  }
+  h2 {
+    font-size: 13pt;
+    break-after: avoid;
+    margin-top: 24px;
+  }
+  table {
+    font-size: 8pt;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  .report-metrics,
+  .disclosure {
+    break-inside: avoid;
+  }
+  .report-metrics {
+    print-color-adjust: exact;
+  }
+  .report-type {
+    font-size: 7pt;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  footer {
+    font-size: 8pt;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("fonts/manrope-cyrillic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}

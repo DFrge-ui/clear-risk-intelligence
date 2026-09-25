@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLEAR · {{ tr('Management report') }}</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}"><link rel="stylesheet" href="{{ url_for('static', filename='report.css') }}">
+  <script src="{{ url_for('static', filename='report.js') }}" defer></script>
+</head>
+<body>
+  <div class="report-toolbar"><a href="/">← {{ tr('Back to CLEAR') }}</a><button id="print-report">{{ tr('Print / save as PDF') }}</button></div>
+  <main>
+    <header><span class="wordmark">CLEAR<span>.</span></span><span class="report-type">{{ tr('MANAGEMENT REPORT') }}</span></header>
+    <section class="report-intro"><p class="eyebrow">{{ tr('OPERATIONAL RISK') }}</p><h1>{{ tr('A clear view of the evidence.') }}</h1><p>{{ tr('Operations · September 2026') if data.dataset.is_demo else data.dataset.name }}<br>{{ tr('Analysis date') }}: <strong>{{ data.dataset.as_of }}</strong> · {{ tr('Rules v1') }}</p></section>
+    <section>
+      <h2>{{ tr('01 / Scope & overview') }}</h2>
+      <p class="scope">{{ tr('Selection') }}: {% for key, value in data.filters.items() if value %}{{ tr(key) }} = {{ value if key == 'q' else tr(value) }}{% if not loop.last %}; {% endif %}{% else %}{{ tr('All accepted records') }}{% endfor %}.<br>{{ tr('Recorded losses describe incident amounts; they are not estimates of future exposure. Active means Open or In progress.') }}</p>
+      <div class="report-metrics"><div><strong>{{ data.summary.metrics.total }}</strong><span>{{ tr('Incidents in scope') }}</span></div><div><strong>{{ data.summary.metrics.active }}</strong><span>{{ tr('Active cases') }}</span></div><div><strong>€{{ amount(data.summary.metrics.loss) }}</strong><span>{{ tr('Recorded loss') }}</span></div><div><strong>{{ data.summary.metrics.flagged }}</strong><span>{{ tr('Flagged for review') }}</span></div></div>
+      <p>{{ data.summary.narrative }}</p>
+    </section>
+    <section><h2>{{ tr('02 / Suggested review actions') }}</h2><ol>{% for action in data.summary.actions %}<li>{{ action }}</li>{% else %}<li>{{ tr('No actions: no incidents match the selected filters.') }}</li>{% endfor %}</ol><p class="note">{{ tr('This summary uses deterministic templates and aggregates. No LLM generates or evaluates these conclusions.') }}</p></section>
+    <section>
+      <h2>{{ tr('03 / Recorded loss by category') }}</h2>
+      <table><thead><tr><th>{{ tr('Category') }}</th><th>{{ tr('Incidents') }}</th><th>{{ tr('Flagged') }}</th><th>{{ tr('Recorded loss') }}</th></tr></thead><tbody>{% for category in data.summary.categories %}<tr><td>{{ tr(category.name) }}</td><td>{{ category.count }}</td><td>{{ category.flagged }}</td><td>€{{ amount(category.loss) }}</td></tr>{% else %}<tr><td colspan="4">{{ tr('No records in scope.') }}</td></tr>{% endfor %}</tbody></table>
+    </section>
+    <section>
+      <h2>{{ tr('04 / Priority review queue') }}</h2><p class="note">{{ tr('Up to 15 flagged incidents, sorted by score and then loss. The CSV and JSON exports include the entire selection.') }}</p>
+      <table><thead><tr><th>{{ tr('Incident / source row') }}</th><th>{{ tr('Status') }}</th><th>{{ tr('Score') }}</th><th>{{ tr('Loss (EUR)') }}</th><th>{{ tr('Review flags') }}</th></tr></thead><tbody>{% for r in (data.records | selectattr('flags') | list)[:15] %}<tr><td>{{ r.incident_id }}<small>{{ tr('Source row') }} {{ r.source_row }}</small></td><td>{{ tr(r.status) }}</td><td>{{ r.score }}</td><td>{{ amount(r.loss_eur) }}</td><td>{% for label in r.flag_labels %}{{ tr(label) }}{% if not loop.last %}; {% endif %}{% endfor %}</td></tr>{% else %}<tr><td colspan="5">{{ tr('No review flags in this selection.') }}</td></tr>{% endfor %}</tbody></table>
+    </section>
+    <section>
+      <h2>{{ tr('05 / Data quality & lineage') }}</h2>
+      <p>{{ tr('Source rows') }}: {{ data.dataset.quality.total }} · {{ tr('Accepted') }}: {{ data.dataset.quality.accepted }} · {{ tr('Duplicates removed') }}: {{ data.dataset.quality.duplicates }} · {{ tr('Rejected') }}: {{ data.dataset.quality.rejected }} · {{ tr('Accepted rows normalized') }}: {{ data.dataset.quality.cleaned }}.<br>{{ tr('Row acceptance rate') }}: {{ data.dataset.quality.acceptance_rate }}% · {{ tr('Blank rows skipped') }}: {{ data.dataset.quality.blank }}.</p>
+      <p class="note">{{ tr('Quality counts cover the complete source dataset, even when the report is filtered. Invalid amounts are not imputed. Conflicting IDs retain the first valid record and reject the later row. Source row numbers count CSV records with the header at row 1.') }}</p>
+      {% if data.dataset.quality.ignored_columns %}<p class="note">{{ tr('Ignored columns: {columns}.', columns=data.dataset.quality.ignored_columns | join(', ')) }}</p>{% endif %}
+      <ul>{% for label, count in data.dataset.quality.changes.items() %}<li>{{ tr(label) }}: {{ count }}</li>{% endfor %}</ul>
+    </section>
+    <section>
+      <h2>{{ tr('06 / Rule definitions & limitations') }}</h2><table><thead><tr><th>{{ tr('Rule / weight') }}</th><th>{{ tr('Definition') }}</th></tr></thead><tbody>{% for rule in data.rules %}<tr><td>{{ tr(rule.label) }} (+{{ rule.weight }})</td><td>{{ tr(rule.description) }}</td></tr>{% endfor %}</tbody></table>
+      <p class="note">{{ tr('The score is a 0–100 weighted sum, not a probability. Outlier thresholds use the full accepted dataset, inclusive quartiles, and positive IQR. Filter changes do not recalculate thresholds. An unflagged case is not necessarily low risk. Thresholds are demonstration choices and do not represent RBI policy.') }}</p>
+    </section>
+    <footer>{{ tr(data.disclosure) }}<br>{{ tr('Report uses the same Python analysis as the dashboard.') }}</footer>
+  </main>
+</body>
+</html>

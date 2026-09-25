@@ -1,0 +1,3 @@
+# Optional; the app and Python tests do not require a browser automation package.
+-r requirements-dev.txt
+playwright==1.63.0

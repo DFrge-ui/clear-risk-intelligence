@@ -1,0 +1,176 @@
+incident_id,occurred_on,category,business_unit,severity,status,loss_eur,owner,description
+SYN-1001,11.08.2026, third party ,Electroshield Samara,Low,Resolved,€ 0.00,Control team A,External feed unavailable
+SYN-1002,2026-09-10,Process,Electroshield Samara,Low,Open,0.00,Control team B,Duplicate processing detected
+SYN-1003,2026-08-20,Third party,Electroshield Samara,Medium,In progress,3200.00,Control team B,External feed unavailable
+SYN-1004,2026-08-09,Process,Electroshield Samara,High,In progress,18600.00,,Reconciliation mismatch
+SYN-1005,2026-09-18,Process,Samara BKK,High,Resolved,1200.00,Control team A,Manual handover exception
+SYN-1006,2026-08-26,Technology,Electroshield Samara,Medium,Resolved,750.00,Control team B,Access provisioning exception
+SYN-1007,2026-08-17,Technology,Electroshield Samara,Critical,Resolved,480.00,,Service availability interruption
+SYN-1008,2026-09-14,Process,Zhigulevskoye Pivo,Medium,Open,1200.00,Control team A,Duplicate processing detected
+SYN-1009,2026-08-27,Third party,Zhigulevskoye Pivo,Low,Resolved,3200.00,Control team B,External feed unavailable
+SYN-1010,2026-08-23,Process,Samara BKK,Low,In progress,0.00,Operations desk,Reconciliation mismatch
+SYN-1011,2026-09-13,Technology,Samara BKK,Medium,Resolved,4500.00,,Access provisioning exception
+SYN-1012,2026-08-19, process ,Electroshield Samara,Medium,In progress,18600.00,,Duplicate processing detected
+SYN-1013,2026-09-03,Process,Electroshield Samara,Low,Resolved,480.00,Control team A,Reconciliation mismatch
+SYN-1014,07.08.2026,Technology,Samara BKK,Medium,Resolved,350.00,,Access provisioning exception
+SYN-1015,2026-08-03,People,Electroshield Samara,Medium,In progress,3200.00,Operations desk,Capacity planning exception
+SYN-1016,2026-09-18,Process,Zhigulevskoye Pivo,Medium,In progress,750.00,Control team B,Duplicate processing detected
+SYN-1017,2026-08-15,Compliance,Samara BKK,Medium,Resolved,750.00,Operations desk,Control evidence missing
+SYN-1018,2026-09-03,Process,Electroshield Samara,Medium,Resolved,"€ 3,200.00",Control team A,Manual handover exception
+SYN-1019,2026-09-08,Compliance,Electroshield Samara,Low,In progress,750.00,Control team A,Documentation gap
+SYN-1020,2026-08-11,Process,Samara BKK,Medium,Resolved,120.00,,Duplicate processing detected
+SYN-1021,2026-08-16,Technology,Electroshield Samara,Medium,Resolved,3200.00,Control team B,Access provisioning exception
+SYN-1022,2026-08-10,Process,Samara BKK,Medium,In progress,1200.00,Control team B,Reconciliation mismatch
+SYN-1023,2026-08-03, process ,Electroshield Samara,Medium,Resolved,4500.00,Control team A,Reconciliation mismatch
+SYN-1024,2026-08-18,Technology,Zhigulevskoye Pivo,Low,Resolved,0.00,,Batch processing delay
+SYN-1025,2026-09-02,Process,Samara BKK,Low,Resolved,4500.00,Control team B,Reconciliation mismatch
+SYN-1026,2026-09-18,Technology,Electroshield Samara,Medium,In progress,1850.00,Control team A,Batch processing delay
+SYN-1027,31.08.2026,Process,Samara BKK,Low,In progress,12400.00,,Reconciliation mismatch
+SYN-1028,2026-09-23,Technology,Electroshield Samara,Low,Resolved,480.00,Control team A,Batch processing delay
+SYN-1029,2026-09-20,Third party,Samara BKK,Critical,Resolved,3200.00,Control team B,Vendor delivery delay
+SYN-1030,2026-08-13,Process,Samara BKK,High,Resolved,480.00,Control team A,Manual handover exception
+SYN-1031,2026-09-18,Technology,Electroshield Samara,Medium,In progress,2400.00,,Batch processing delay
+SYN-1032,2026-09-06,Technology,Electroshield Samara,Medium,Resolved,480.00,Operations desk,Batch processing delay
+SYN-1033,2026-08-13,Technology,Electroshield Samara,High,Resolved,2400.00,Control team A,Batch processing delay
+SYN-1034,2026-08-10, technology ,Electroshield Samara,Low,Resolved,120.00,Control team B,Access provisioning exception
+SYN-1035,2026-09-08,Third party,Electroshield Samara,Medium,Open,"€ 4,500.00",Operations desk,Vendor delivery delay
+SYN-1036,2026-09-14,Technology,Zhigulevskoye Pivo,Medium,In progress,1200.00,,Service availability interruption
+SYN-1037,2026-09-08,People,Electroshield Samara,Medium,Open,120.00,Control team A,Capacity planning exception
+SYN-1038,2026-08-07,Technology,Samara BKK,Medium,Open,750.00,Operations desk,Service availability interruption
+SYN-1039,2026-09-23,Technology,Electroshield Samara,Medium,Resolved,3200.00,Control team A,Access provisioning exception
+SYN-1040,11.08.2026,Compliance,Zhigulevskoye Pivo,Low,Resolved,750.00,Control team A,Control evidence missing
+SYN-1041,2026-09-17,Third party,Zhigulevskoye Pivo,Medium,In progress,350.00,Control team B,External feed unavailable
+SYN-1042,2026-08-06,Third party,Electroshield Samara,Medium,Resolved,750.00,,Vendor delivery delay
+SYN-1043,2026-08-19,Technology,Samara BKK,Medium,Resolved,1200.00,,Access provisioning exception
+SYN-1044,2026-09-16,Third party,Samara BKK,Low,Open,3200.00,Control team A,Vendor delivery delay
+SYN-1045,2026-08-26, third party ,Electroshield Samara,Low,In progress,350.00,Operations desk,Supplier service interruption
+SYN-1046,2026-08-29,Third party,Electroshield Samara,Medium,In progress,120.00,Control team B,Supplier service interruption
+SYN-1047,2026-09-19,Compliance,Zhigulevskoye Pivo,Low,Resolved,350.00,,Documentation gap
+SYN-1048,2026-08-09,Compliance,Samara BKK,High,In progress,480.00,Control team A,Scheduled review incomplete
+SYN-1049,2026-08-17,Technology,Samara BKK,High,In progress,2400.00,Control team A,Access provisioning exception
+SYN-1050,2026-09-21,Technology,Zhigulevskoye Pivo,Low,In progress,1200.00,Operations desk,Access provisioning exception
+SYN-1051,2026-08-19,Process,Samara BKK,Low,In progress,3200.00,Operations desk,Reconciliation mismatch
+SYN-1052,2026-08-30,Technology,Electroshield Samara,High,In progress,"€ 1,850.00",Control team A,Service availability interruption
+SYN-1053,03.08.2026,Compliance,Electroshield Samara,Medium,In progress,480.00,Control team B,Scheduled review incomplete
+SYN-1054,2026-08-22,Process,Electroshield Samara,Low,Resolved,24500.00,Operations desk,Duplicate processing detected
+SYN-1055,2026-08-15,Process,Samara BKK,Medium,Resolved,1850.00,,Duplicate processing detected
+SYN-1056,2026-09-07, third party ,Electroshield Samara,Medium,Resolved,350.00,Operations desk,Vendor delivery delay
+SYN-1057,2026-08-31,Technology,Samara BKK,Medium,Resolved,4500.00,Control team B,Access provisioning exception
+SYN-1058,2026-09-14,Process,Electroshield Samara,Medium,Resolved,350.00,Operations desk,Reconciliation mismatch
+SYN-1059,2026-08-15,Compliance,Samara BKK,Low,Resolved,480.00,Control team A,Control evidence missing
+SYN-1060,2026-09-01,Technology,Samara BKK,High,Resolved,2400.00,Control team B,Access provisioning exception
+SYN-1061,2026-09-16,Third party,Electroshield Samara,Low,In progress,2400.00,Control team A,Vendor delivery delay
+SYN-1062,2026-08-10,Technology,Samara BKK,Medium,Resolved,3200.00,Control team B,Service availability interruption
+SYN-1063,2026-08-31,Third party,Electroshield Samara,Critical,Resolved,3200.00,,External feed unavailable
+SYN-1064,2026-08-19,Process,Samara BKK,Medium,Resolved,350.00,Operations desk,Duplicate processing detected
+SYN-1065,2026-08-21,Process,Samara BKK,Low,In progress,480.00,Operations desk,Manual handover exception
+SYN-1066,27.08.2026,Process,Samara BKK,Low,Open,3200.00,Control team B,Reconciliation mismatch
+SYN-1067,2026-08-16, process ,Samara BKK,Medium,Resolved,1200.00,,Duplicate processing detected
+SYN-1068,2026-08-27,People,Samara BKK,High,Resolved,0.00,Control team A,Approval handover delay
+SYN-1069,2026-08-29,Technology,Electroshield Samara,Critical,Resolved,"€ 1,850.00",Control team B,Service availability interruption
+SYN-1070,2026-09-14,Technology,Samara BKK,Medium,Resolved,1850.00,Control team B,Service availability interruption
+SYN-1071,2026-09-09,Compliance,Electroshield Samara,High,Resolved,4500.00,Control team A,Control evidence missing
+SYN-1072,2026-08-19,Third party,Samara BKK,Low,Resolved,350.00,Operations desk,Supplier service interruption
+SYN-1073,2026-09-20,Process,Samara BKK,Medium,Resolved,1200.00,Operations desk,Reconciliation mismatch
+SYN-1074,2026-08-17,Process,Electroshield Samara,Critical,Open,3200.00,Control team A,Reconciliation mismatch
+SYN-1075,2026-08-18,People,Samara BKK,Medium,Resolved,480.00,,Capacity planning exception
+SYN-1076,2026-08-26,Technology,Samara BKK,Medium,Resolved,480.00,Control team A,Batch processing delay
+SYN-1077,2026-09-08,People,Samara BKK,High,Resolved,120.00,,Capacity planning exception
+SYN-1078,2026-08-09, technology ,Zhigulevskoye Pivo,Medium,Resolved,4500.00,Control team A,Access provisioning exception
+SYN-1079,07.08.2026,Compliance,Electroshield Samara,Medium,Resolved,1200.00,Operations desk,Control evidence missing
+SYN-1080,2026-09-12,Compliance,Samara BKK,Critical,Open,2400.00,Control team B,Scheduled review incomplete
+SYN-1081,2026-09-21,Technology,Samara BKK,High,Resolved,24500.00,,Service availability interruption
+SYN-1082,2026-08-08,Compliance,Zhigulevskoye Pivo,High,In progress,4500.00,,Control evidence missing
+SYN-1083,2026-08-04,Third party,Samara BKK,Medium,Resolved,4500.00,Operations desk,Supplier service interruption
+SYN-1084,2026-09-10,Process,Zhigulevskoye Pivo,Medium,Resolved,1200.00,Control team A,Duplicate processing detected
+SYN-1085,2026-09-07,People,Samara BKK,Medium,In progress,120.00,,Capacity planning exception
+SYN-1086,2026-08-17,Third party,Samara BKK,Low,Resolved,"€ 2,400.00",Control team B,Vendor delivery delay
+SYN-1087,2026-08-30,Third party,Electroshield Samara,Medium,Resolved,1200.00,Operations desk,Vendor delivery delay
+SYN-1088,2026-09-18,Third party,Samara BKK,Low,In progress,750.00,Operations desk,Supplier service interruption
+SYN-1089,2026-08-20, third party ,Electroshield Samara,High,Open,350.00,Operations desk,Supplier service interruption
+SYN-1090,2026-08-03,Compliance,Electroshield Samara,Low,In progress,750.00,Control team B,Scheduled review incomplete
+SYN-1091,2026-08-11,Technology,Samara BKK,Medium,Resolved,0.00,Control team A,Batch processing delay
+SYN-1092,06.08.2026,Process,Zhigulevskoye Pivo,Medium,Resolved,2400.00,,Reconciliation mismatch
+SYN-1093,2026-09-15,Compliance,Electroshield Samara,Medium,Resolved,1850.00,Control team B,Control evidence missing
+SYN-1094,2026-09-07,Compliance,Samara BKK,Low,Open,750.00,Control team B,Documentation gap
+SYN-1095,2026-08-30,Process,Zhigulevskoye Pivo,Medium,In progress,2400.00,Control team A,Duplicate processing detected
+SYN-1096,2026-08-16,People,Zhigulevskoye Pivo,Low,Resolved,120.00,Control team A,Training completion overdue
+SYN-1097,2026-08-31,Technology,Electroshield Samara,Low,Open,3200.00,,Service availability interruption
+SYN-1098,2026-09-01,Technology,Electroshield Samara,Medium,Resolved,750.00,Control team B,Service availability interruption
+SYN-1099,2026-08-30,Compliance,Electroshield Samara,High,Resolved,4500.00,Control team B,Documentation gap
+SYN-1100,2026-08-13, technology ,Zhigulevskoye Pivo,Low,Resolved,750.00,Operations desk,Service availability interruption
+SYN-1101,2026-09-04,Technology,Electroshield Samara,High,Resolved,750.00,,Service availability interruption
+SYN-1102,2026-09-10,Technology,Zhigulevskoye Pivo,High,Resolved,0.00,Control team A,Batch processing delay
+SYN-1103,2026-09-20,Technology,Zhigulevskoye Pivo,Low,Resolved,"€ 4,500.00",Control team A,Batch processing delay
+SYN-1104,2026-09-09,Process,Samara BKK,Low,Resolved,2400.00,,Reconciliation mismatch
+SYN-1105,13.08.2026,Process,Zhigulevskoye Pivo,Medium,In progress,1850.00,,Duplicate processing detected
+SYN-1106,2026-09-01,Process,Electroshield Samara,Medium,Resolved,1850.00,Operations desk,Manual handover exception
+SYN-1107,2026-08-03,Process,Electroshield Samara,High,Resolved,1850.00,,Manual handover exception
+SYN-1108,2026-09-12,Technology,Samara BKK,High,In progress,3200.00,Control team A,Batch processing delay
+SYN-1109,2026-09-16,Technology,Samara BKK,Medium,Resolved,350.00,Control team A,Batch processing delay
+SYN-1110,2026-08-22,People,Electroshield Samara,Medium,Resolved,4500.00,Control team A,Capacity planning exception
+SYN-1111,2026-09-01, process ,Electroshield Samara,High,Resolved,480.00,Control team B,Manual handover exception
+SYN-1112,2026-09-02,People,Samara BKK,Medium,Resolved,750.00,Control team B,Approval handover delay
+SYN-1113,2026-08-11,Process,Electroshield Samara,Medium,Resolved,18600.00,Operations desk,Manual handover exception
+SYN-1114,2026-09-18,Process,Zhigulevskoye Pivo,Low,In progress,3200.00,,Reconciliation mismatch
+SYN-1115,2026-09-06,Process,Samara BKK,Medium,In progress,2400.00,,Manual handover exception
+SYN-1116,2026-09-21,Compliance,Samara BKK,Low,Resolved,480.00,Control team A,Scheduled review incomplete
+SYN-1117,2026-09-24,Third party,Samara BKK,Medium,In progress,1850.00,,Supplier service interruption
+SYN-1118,31.08.2026,Technology,Electroshield Samara,Low,In progress,4500.00,,Batch processing delay
+SYN-1119,2026-08-07,Third party,Samara BKK,Critical,Resolved,1850.00,Operations desk,Vendor delivery delay
+SYN-1120,2026-09-15,Third party,Electroshield Samara,High,Resolved,"€ 1,850.00",,Vendor delivery delay
+SYN-1121,2026-08-07,Third party,Samara BKK,Low,Resolved,2400.00,Operations desk,Supplier service interruption
+SYN-1122,2026-09-17, third party ,Electroshield Samara,High,Resolved,1850.00,,Supplier service interruption
+SYN-1123,2026-08-21,Third party,Zhigulevskoye Pivo,High,Open,0.00,Operations desk,Vendor delivery delay
+SYN-1124,2026-08-14,Technology,Samara BKK,Medium,In progress,3200.00,Control team B,Batch processing delay
+SYN-1125,2026-09-09,Third party,Samara BKK,Low,Resolved,1850.00,Control team B,Vendor delivery delay
+SYN-1126,2026-09-23,Third party,Samara BKK,Low,In progress,2400.00,Operations desk,External feed unavailable
+SYN-1127,2026-09-09,Process,Zhigulevskoye Pivo,Medium,In progress,120.00,,Duplicate processing detected
+SYN-1128,2026-09-02,Technology,Electroshield Samara,Medium,Open,750.00,Control team B,Service availability interruption
+SYN-1129,2026-08-04,Process,Samara BKK,Medium,In progress,4500.00,Operations desk,Reconciliation mismatch
+SYN-1130,2026-08-21,Process,Samara BKK,High,Resolved,0.00,Operations desk,Reconciliation mismatch
+SYN-1131,21.09.2026,Third party,Samara BKK,High,In progress,4500.00,Control team A,External feed unavailable
+SYN-1132,2026-08-26,Third party,Samara BKK,Low,Resolved,750.00,Control team A,Vendor delivery delay
+SYN-1133,2026-09-06, process ,Zhigulevskoye Pivo,Low,Open,1850.00,Operations desk,Reconciliation mismatch
+SYN-1134,2026-08-24,Technology,Electroshield Samara,Medium,Resolved,2400.00,,Batch processing delay
+SYN-1135,2026-08-28,Technology,Electroshield Samara,High,Resolved,480.00,Operations desk,Batch processing delay
+SYN-1136,2026-08-26,Compliance,Zhigulevskoye Pivo,Low,In progress,0.00,,Documentation gap
+SYN-1137,2026-09-11,People,Electroshield Samara,Medium,Resolved,€ 120.00,Operations desk,Capacity planning exception
+SYN-1138,2026-09-16,Technology,Zhigulevskoye Pivo,Medium,Resolved,120.00,,Batch processing delay
+SYN-1139,2026-08-09,Technology,Samara BKK,Medium,In progress,0.00,Control team B,Service availability interruption
+SYN-1140,2026-08-12,Process,Samara BKK,High,In progress,3200.00,Control team A,Manual handover exception
+SYN-1141,2026-08-31,Third party,Samara BKK,Medium,Open,750.00,Control team B,Vendor delivery delay
+SYN-1142,2026-08-25,Technology,Electroshield Samara,Critical,Resolved,1200.00,,Service availability interruption
+SYN-1143,2026-08-08,Technology,Samara BKK,High,Resolved,120.00,Control team A,Batch processing delay
+SYN-1144,16.08.2026, compliance ,Electroshield Samara,High,Resolved,480.00,Control team B,Documentation gap
+SYN-1145,2026-09-10,Technology,Electroshield Samara,Low,In progress,480.00,Operations desk,Batch processing delay
+SYN-1146,2026-09-14,People,Electroshield Samara,Low,In progress,3200.00,Control team B,Training completion overdue
+SYN-1147,2026-08-19,Process,Electroshield Samara,Low,Resolved,480.00,Control team B,Duplicate processing detected
+SYN-1148,2026-09-21,Process,Zhigulevskoye Pivo,Medium,Resolved,120.00,Control team A,Manual handover exception
+SYN-1149,2026-09-14,Process,Electroshield Samara,High,Open,4500.00,Operations desk,Manual handover exception
+SYN-1150,2026-08-28,Third party,Samara BKK,Medium,Open,0.00,Control team A,Vendor delivery delay
+SYN-1151,2026-09-10,Third party,Samara BKK,Low,Open,2400.00,Control team A,Supplier service interruption
+SYN-1152,2026-09-10,Technology,Electroshield Samara,Medium,Resolved,4500.00,Operations desk,Service availability interruption
+SYN-1153,2026-09-13,Process,Electroshield Samara,Medium,Open,1850.00,Control team B,Manual handover exception
+SYN-1154,2026-08-28,Process,Samara BKK,High,In progress,€ 480.00,Control team A,Manual handover exception
+SYN-1155,2026-09-02, process ,Electroshield Samara,Low,In progress,750.00,Control team A,Reconciliation mismatch
+SYN-1156,2026-08-11,Technology,Electroshield Samara,Medium,Resolved,120.00,Control team A,Access provisioning exception
+SYN-1157,25.08.2026,People,Samara BKK,Low,In progress,3200.00,Control team A,Approval handover delay
+SYN-1158,2026-08-12,Third party,Samara BKK,Medium,Open,1200.00,Control team B,Supplier service interruption
+SYN-1159,2026-09-08,Process,Samara BKK,High,In progress,3200.00,,Duplicate processing detected
+SYN-1160,2026-08-04,People,Electroshield Samara,Medium,Resolved,4500.00,Operations desk,Training completion overdue
+SYN-1161,2026-08-14,Technology,Samara BKK,Medium,Resolved,750.00,,Batch processing delay
+SYN-1162,2026-08-27,Technology,Samara BKK,Medium,Open,0.00,,Service availability interruption
+SYN-1163,2026-09-08,Technology,Electroshield Samara,High,Resolved,750.00,Control team A,Batch processing delay
+SYN-1164,2026-08-31,Technology,Samara BKK,Low,Open,4500.00,,Access provisioning exception
+SYN-1165,2026-08-25,Process,Samara BKK,Medium,In progress,750.00,Control team A,Manual handover exception
+SYN-1166,2026-08-05, third party ,Samara BKK,Medium,Resolved,4500.00,,External feed unavailable
+SYN-1167,2026-08-11,Technology,Zhigulevskoye Pivo,Low,In progress,480.00,Operations desk,Service availability interruption
+SYN-1168,2026-08-27,Technology,Electroshield Samara,Low,Resolved,2400.00,Control team B,Access provisioning exception
+SYN-1009,2026-08-27,Third party,Zhigulevskoye Pivo,Low,Resolved,3200.00,Control team B,External feed unavailable
+SYN-1032,2026-09-06,Technology,Electroshield Samara,Medium,Resolved,480.00,Operations desk,Batch processing delay
+SYN-1066,27.08.2026,Process,Samara BKK,Low,Open,3200.00,Control team B,Reconciliation mismatch
+SYN-1095,2026-08-30,Process,Zhigulevskoye Pivo,Medium,In progress,2400.00,Control team A,Duplicate processing detected
+SYN-BAD-1,2026-08-16,Technology,Electroshield Samara,Medium,Resolved,not recorded,Control team B,Access provisioning exception
+SYN-BAD-2,2026-02-30,Process,Samara BKK,Medium,In progress,1200.00,Control team B,Reconciliation mismatch
+SYN-BAD-3,2026-08-03, process ,Electroshield Samara,Urgent,Resolved,4500.00,Control team A,Reconciliation mismatch
