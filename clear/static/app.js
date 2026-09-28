@@ -39,25 +39,25 @@ const pageCopy = {
   overview: [
     "Overview",
     "SEE THE SIGNAL. TAKE THE NEXT STEP.",
-    "Risk, made clear",
-    "A practical view of operational incidents. From source to decision.",
+    "Overview",
+    "Incidents, losses and outstanding reviews.",
   ],
   incidents: [
     "Incident explorer",
     "EVERY RECORD HAS A STORY.",
-    "Explore the evidence",
-    "Find an incident. Follow its signals. Understand the next step.",
+    "Incident register",
+    "Search records and inspect the evidence behind each flag.",
   ],
   pipeline: [
     "Data pipeline",
     "GOOD DECISIONS START WITH GOOD DATA.",
-    "Trust the process",
-    "An inspectable path from imperfect CSV to consistent, usable data.",
+    "Data pipeline",
+    "Upload, validate and trace each source row.",
   ],
   project: [
     "Behind the project",
     "A SMALL TOOL. A PRACTICAL PURPOSE.",
-    "Built to learn. Built to work",
+    "Behind the project",
     "A transparent Python portfolio project by Dmitrii Kataev.",
   ],
 };
@@ -80,7 +80,7 @@ function showView(view, updateHash = true) {
   );
   $("breadcrumb-current").textContent = crumb;
   $("page-eyebrow").textContent = eyebrow;
-  $("page-title").innerHTML = `${title}<span>.</span>`;
+  $("page-title").textContent = title;
   $("page-subtitle").textContent = subtitle;
   document.title = `${crumb} · CLEAR — Dmitrii Kataev`;
   if (updateHash) history.replaceState(null, "", `#${view}`);
@@ -143,23 +143,8 @@ async function refresh() {
   }
 }
 
-function animateNumber(
-  element,
-  final,
-  format = (n) => Math.round(n).toLocaleString(LOCALE),
-) {
-  if (element._animation) cancelAnimationFrame(element._animation);
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    element.textContent = format(final);
-    return;
-  }
-  const start = performance.now();
-  const tick = (time) => {
-    const progress = Math.min(1, (time - start) / 650);
-    element.textContent = format(final * (1 - Math.pow(1 - progress, 3)));
-    if (progress < 1) element._animation = requestAnimationFrame(tick);
-  };
-  element._animation = requestAnimationFrame(tick);
+function animateNumber(el, value, format = (n) => Math.round(n).toLocaleString(LOCALE)) {
+  el.textContent = format(value);
 }
 
 function render() {

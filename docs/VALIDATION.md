@@ -1,5 +1,11 @@
 # Validation evidence
 
+## 28 September 2026 interface update
+
+The notebook design passed all **54 Python tests** and both shipped browser checks (CSV activation, filters, details, exports, reports and EN/DE/RU switching). All four views passed overflow checks at widths **320, 390, 768 and 1440** in all three languages: **48 combinations**, with no JavaScript errors. An axe-core spot check found **zero automated WCAG 2 A/AA and 2.1 AA violations** in the four English desktop views and upload dialog. This remains a bounded automated check, not comprehensive accessibility certification.
+
+The interface now uses a warm paper palette, serif headings, ruled sections and restrained motion. Metrics update immediately when filters change. Report styling follows the same visual language; analytical rules and data are unchanged.
+
 Checks performed on **24–25 September 2026**, on Windows with **Python 3.14.6**, Flask **3.1.3**, Waitress **3.0.2**, pytest **9.1.1**, and Playwright **1.63.0** using installed Google Chrome **153.0.8010.53**.
 
 ## Python checks

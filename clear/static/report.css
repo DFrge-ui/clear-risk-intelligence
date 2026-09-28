@@ -9,8 +9,8 @@
 }
 body {
   margin: 0;
-  background: #eef1e9;
-  color: #283421;
+  background: #f0eeea;
+  color: #312c24;
   font:
     14px/1.8 Manrope,
     "Segoe UI",
@@ -27,7 +27,7 @@ body {
   padding: 0 25px;
 }
 .report-toolbar a {
-  color: #567239;
+  color: #635848;
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
@@ -35,9 +35,9 @@ body {
 .report-toolbar button {
   border: 0;
   border-radius: 8px;
-  background: #d3f86a;
+  background: #bdb3a5;
   padding: 12px 20px;
-  color: #2d3e1d;
+  color: #352f26;
   font:
     600 13px Manrope,
     "Segoe UI",
@@ -49,13 +49,13 @@ main {
   margin: 20px auto 50px;
   background: #fff;
   padding: 54px 60px;
-  box-shadow: 0 10px 50px #21340b0a;
+  box-shadow: 0 10px 50px #25211a0a;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #dce4d1;
+  border-bottom: 1px solid #e0dcd5;
   padding-bottom: 22px;
   gap: 25px;
 }
@@ -65,12 +65,12 @@ header {
   letter-spacing: -1.6px;
 }
 .wordmark > span {
-  color: #8db546;
+  color: #928269;
 }
 .report-type {
   font-size: 9px;
   letter-spacing: 1.4px;
-  color: #60704f;
+  color: #6f6350;
 }
 .report-intro {
   margin-top: 35px;
@@ -78,7 +78,7 @@ header {
 .eyebrow {
   font-size: 10px;
   letter-spacing: 1.5px;
-  color: #60704f;
+  color: #6f6350;
   font-weight: 600;
 }
 h1 {
@@ -92,17 +92,17 @@ h2 {
   line-height: 1.4;
   letter-spacing: -0.4px;
   margin: 30px 0 15px;
-  color: #425930;
+  color: #4f473a;
 }
 p {
   margin: 10px 0;
-  color: #657851;
+  color: #756854;
 }
 .disclosure {
   padding: 15px 18px;
-  background: #f1f6e8;
-  border-left: 3px solid #aec97c;
-  color: #6c8258;
+  background: #f2f0ec;
+  border-left: 3px solid #b1a594;
+  color: #7e705c;
   font-size: 11px;
   margin-top: 22px;
 }
@@ -110,8 +110,8 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1.6fr 1fr;
   gap: 18px;
-  background: #f6f9ef;
-  border: 1px solid #e1eace;
+  background: #f6f4f2;
+  border: 1px solid #e2ddd6;
   border-radius: 10px;
   padding: 20px;
   margin: 20px 0;
@@ -126,12 +126,12 @@ p {
 .report-metrics span {
   display: block;
   font-size: 10px;
-  color: #60704f;
+  color: #6f6350;
 }
 .scope,
 .note {
   font-size: 11px;
-  color: #60704f;
+  color: #6f6350;
   line-height: 1.8;
 }
 table {
@@ -142,26 +142,26 @@ table {
 }
 th {
   text-align: left;
-  background: #f0f4e8;
-  color: #657c4d;
+  background: #f1efeb;
+  color: #756854;
   font-size: 10px;
   font-weight: 600;
 }
 td,
 th {
   padding: 10px 12px;
-  border-bottom: 1px solid #e4ecd9;
+  border-bottom: 1px solid #e7e3de;
   vertical-align: top;
 }
 small {
   display: block;
-  color: #60704f;
+  color: #6f6350;
   font-size: 9px;
 }
 ul,
 ol {
   padding-left: 20px;
-  color: #667f4e;
+  color: #776a56;
   font-size: 12px;
 }
 li {
@@ -169,14 +169,14 @@ li {
 }
 footer {
   margin-top: 40px;
-  border-top: 1px solid #dfe8d2;
+  border-top: 1px solid #e2ded8;
   padding-top: 20px;
   font-size: 10px;
-  color: #60704f;
+  color: #6f6350;
 }
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid #89a858;
+  outline: 3px solid #94846c;
   outline-offset: 4px;
 }
 @media (max-width: 700px) {
@@ -278,3 +278,19 @@ a:focus-visible {
   font-display: swap;
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
+
+/* Match the working notebook, including the printable report. */
+body { background: #f1ede5; color: #292724; font-family: "Segoe UI", Arial, sans-serif; }
+main { background: #fffdf9; box-shadow: none; border: 1px solid #d8d2c8; }
+.wordmark { font: 40px Georgia, serif; letter-spacing: -2px; text-transform: lowercase; }
+.wordmark > span { color: #a3442d; }
+h1 { font: 38px/1.2 Georgia, serif; letter-spacing: -1px; }
+h2 { color: #292724; border-top: 1px solid #d8d2c8; padding-top: 16px; }
+p, ul, ol { color: #5b554c; }
+.report-toolbar button { background: #a3442d; color: white; border-radius: 3px; font-family: inherit; }
+.report-toolbar a { color: #a3442d; }
+.report-metrics { border-radius: 0; background: #f2ede5; border-color: #d8d2c8; }
+.report-metrics strong { font-family: Georgia, serif; font-weight: 400; }
+.disclosure { background: #f2ede5; border-color: #a3442d; color: #5b554c; }
+th { background: #eee9e0; color: #554e44; }
+@media print { body, main { background: white; } main { border: 0; } }

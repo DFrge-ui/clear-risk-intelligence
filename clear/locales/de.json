@@ -334,5 +334,16 @@
   "flagged": "Markiert",
   "Enable JavaScript for the interactive dashboard. You can still": "Aktivieren Sie JavaScript für das interaktive Dashboard. Sie können auch",
   "open the server-rendered report": "den serverseitig erstellten Bericht öffnen",
-  "AI-assisted learning project by Dmitrii Kataev. Synthetic data only. Company names are display placeholders: all incidents and amounts are fictional and unrelated to the named companies' actual activities. Independent portfolio demo; not affiliated with or endorsed by RBI or the named companies. Review flags are illustrative, not regulatory or bank-approved decisions.": "KI-unterstütztes Lernprojekt von Dmitrii Kataev. Ausschließlich synthetische Daten. Firmennamen sind Platzhalter: Alle Vorfälle und Beträge sind fiktiv und stehen in keinem Zusammenhang mit den tatsächlichen Aktivitäten der genannten Firmen. Unabhängiges Portfolioprojekt, weder mit RBI oder den genannten Firmen verbunden noch von ihnen unterstützt. Prüfhinweise dienen der Veranschaulichung und sind keine regulatorischen oder bankseitig genehmigten Entscheidungen."
+  "AI-assisted learning project by Dmitrii Kataev. Synthetic data only. Company names are display placeholders: all incidents and amounts are fictional and unrelated to the named companies' actual activities. Independent portfolio demo; not affiliated with or endorsed by RBI or the named companies. Review flags are illustrative, not regulatory or bank-approved decisions.": "KI-unterstütztes Lernprojekt von Dmitrii Kataev. Ausschließlich synthetische Daten. Firmennamen sind Platzhalter: Alle Vorfälle und Beträge sind fiktiv und stehen in keinem Zusammenhang mit den tatsächlichen Aktivitäten der genannten Firmen. Unabhängiges Portfolioprojekt, weder mit RBI oder den genannten Firmen verbunden noch von ihnen unterstützt. Prüfhinweise dienen der Veranschaulichung und sind keine regulatorischen oder bankseitig genehmigten Entscheidungen.",
+  "Operations notebook": "Arbeitsjournal",
+  "Needs attention": "Handlungsbedarf",
+  "Loss by category": "Verlust nach Kategorie",
+  "Validation results": "Prüfergebnis",
+  "A notebook for operational data.": "Ein Journal für operative Daten.",
+  "The problem": "Die Aufgabe",
+  "The approach": "Der Ansatz",
+  "Scope and limitations": "Umfang und Grenzen",
+  "Incidents, losses and outstanding reviews.": "Vorfälle, Verluste und offene Prüfungen.",
+  "Search records and inspect the evidence behind each flag.": "Datensätze durchsuchen und Prüfhinweise nachvollziehen.",
+  "Upload, validate and trace each source row.": "Daten hochladen, prüfen und jede Quellzeile nachvollziehen."
 }
